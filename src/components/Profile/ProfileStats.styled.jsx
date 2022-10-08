@@ -13,6 +13,7 @@ export const StatsItem = styled.li`
   padding-bottom: ${p => p.theme.space[3]}px;
   background-color: ${p => p.theme.colors.backGround};
   border: 1px solid ${p => p.theme.colors.bodyColor};
+  border-radius: 5px;
 `;
 
 export const NameStats = styled.p`

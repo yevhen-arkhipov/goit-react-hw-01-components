@@ -13,6 +13,7 @@ export const StatsBox = styled.div`
   align-items: center;
   background-color: ${p => p.theme.colors.secondBackGround};
   box-shadow: rgb(0 0 0 / 12%) 0px 1px 1px, rgb(0 0 0 / 6%) 0px 4px 4px, rgb(0 0 0 / 16%) 1px 4px 6px;
+  border-radius: 5px;
 }
 `;
 
@@ -35,4 +36,5 @@ export const StatsItem = styled.li`
   padding-top: ${p => p.theme.space[3]}px;
   padding-bottom: ${p => p.theme.space[3]}px;
   background-color: ${getRandomHexColor};
+  border-radius: 5px;
 `;

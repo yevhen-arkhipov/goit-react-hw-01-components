@@ -11,6 +11,7 @@ export const ProfileBox = styled.div`
   flex-direction: column;
   box-shadow: rgb(0 0 0 / 12%) 0px 1px 1px, rgb(0 0 0 / 6%) 0px 4px 4px,
     rgb(0 0 0 / 16%) 1px 4px 6px;
+  border-radius: 5px;
 `;
 
 export const PhotoBox = styled.div`
@@ -21,6 +22,7 @@ export const PhotoBox = styled.div`
   padding-top: ${p => p.theme.space[5]}px;
   padding-bottom: ${p => p.theme.space[5]}px;
   background-color: ${p => p.theme.colors.secondBackGround};
+  border-radius: 5px;
 `;
 
 export const Photo = styled.img`
