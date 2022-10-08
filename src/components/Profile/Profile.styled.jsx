@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ProfileSection = styled.section`
   display: flex;
   justify-content: center;
-  margin-top: ${p => p.theme.space[6]}px;
+  padding-top: ${p => p.theme.space[6]}px;
 `;
 
 export const ProfileBox = styled.div`

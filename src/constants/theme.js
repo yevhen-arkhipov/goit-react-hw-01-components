@@ -1,6 +1,6 @@
 export const theme = {
   colors: {
-    bodyColor: '#e7ecf2;',
+    bodyColor: '#e7ecf2',
     text: '#000000',
     secondText: '#6b6b6b',
     tableText: '#7f8386',
@@ -10,7 +10,7 @@ export const theme = {
     titleBackGround: '#00bcd5',
     trSecondBackGround: '#e4e4e4',
     photoBorderColor: '#cfbdb5',
-    online: 'yellow',
+    online: '#90ee90',
     offline: 'red',
   },
   space: [0, 2, 4, 10, 16, 30, 40, 64],
