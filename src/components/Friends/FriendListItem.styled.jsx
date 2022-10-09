@@ -8,8 +8,7 @@ export const FriendStatus = styled.span`
   border-radius: 50%;
   background-color: ${p =>
     p.isOnline ? p.theme.colors.online : p.theme.colors.offline};
-  box-shadow: rgb(0 0 0 / 12%) 0px 1px 1px, rgb(0 0 0 / 6%) 0px 4px 4px,
-    rgb(0 0 0 / 16%) 1px 4px 6px;
+  box-shadow: ${p => p.theme.shadows.outline};
 `;
 
 export const FriendPhoto = styled.img`

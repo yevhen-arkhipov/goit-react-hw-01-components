@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { TransactionBoard } from './TransactionBoard';
 import {
-  TransactionSection,
   TransactionTable,
   TransactionTableHeader,
   TransactionTableTitle,
@@ -9,10 +8,11 @@ import {
   TransactionTableBody,
   TransactionСolumn,
 } from './TransactionHistory.styled';
+import { Box } from 'components/Box/Box';
 
 export const TransactionHistory = ({ transactions }) => {
   return (
-    <TransactionSection>
+    <Box mt={6} mb={6} as="section">
       <TransactionTable>
         <TransactionTableHeader>
           <TransactionTableTitle>
@@ -33,7 +33,7 @@ export const TransactionHistory = ({ transactions }) => {
           ))}
         </TransactionTableBody>
       </TransactionTable>
-    </TransactionSection>
+    </Box>
   );
 };
 
