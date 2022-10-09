@@ -36,5 +36,4 @@ export const StatsItem = styled.li`
   padding-top: ${p => p.theme.space[3]}px;
   padding-bottom: ${p => p.theme.space[3]}px;
   background-color: ${getRandomHexColor};
-  border-radius: 5px;
 `;
