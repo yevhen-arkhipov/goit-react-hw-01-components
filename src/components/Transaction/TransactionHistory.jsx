@@ -1,18 +1,21 @@
 import PropTypes from 'prop-types';
-import { TransactionBoard } from './TransactionBoard';
+
+// import TransactionBoard from './TransactionBoard';
+
 import {
+  Section,
   TransactionTable,
   TransactionTableHeader,
   TransactionTableTitle,
   TableTitleText,
   TransactionTableBody,
   TransactionСolumn,
+  TransactionСell,
 } from './TransactionHistory.styled';
-import { Box } from 'components/Box/Box';
 
-export const TransactionHistory = ({ transactions }) => {
+const TransactionHistory = ({ items }) => {
   return (
-    <Box mt={6} mb={6} as="section">
+    <Section>
       <TransactionTable>
         <TransactionTableHeader>
           <TransactionTableTitle>
@@ -22,25 +25,28 @@ export const TransactionHistory = ({ transactions }) => {
           </TransactionTableTitle>
         </TransactionTableHeader>
         <TransactionTableBody>
-          {transactions.map(({ id, type, amount, currency }) => (
+          {items.map(({ id, type, amount, currency }) => (
             <TransactionСolumn key={id}>
-              <TransactionBoard
-                type={type}
-                amount={amount}
-                currency={currency}
-              />
+              <TransactionСell>{type}</TransactionСell>
+              <TransactionСell>{amount}</TransactionСell>
+              <TransactionСell>{currency}</TransactionСell>
             </TransactionСolumn>
           ))}
         </TransactionTableBody>
       </TransactionTable>
-    </Box>
+    </Section>
   );
 };
 
 TransactionHistory.propTypes = {
-  transactions: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
     })
   ),
 };
+
+export default TransactionHistory;

@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Section = styled.section`
+  display: flex;
+  justify-content: center;
+  margin-top: ${p => p.theme.space[6]}px;
+`;
+
 export const FriendsList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -16,7 +22,6 @@ export const FriendsItem = styled.li`
   background-color: ${p => p.theme.colors.secondBackGround};
   box-shadow: ${p => p.theme.shadows.outline};
   border-radius: 5px;
-
   &:not(:last-child) {
     margin-bottom: ${p => p.theme.space[3]}px;
   }

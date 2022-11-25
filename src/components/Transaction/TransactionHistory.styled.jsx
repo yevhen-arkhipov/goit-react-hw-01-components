@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const Section = styled.section`
+  margin-top: ${p => p.theme.space[6]}px;
+  margin-bottom: ${p => p.theme.space[6]}px;
+`;
+
 export const TransactionTable = styled.table`
   margin-right: auto;
   margin-left: auto;
@@ -34,4 +39,10 @@ export const TransactionСolumn = styled.tr`
   &:nth-child(2n) {
     background-color: ${p => p.theme.colors.trSecondBackGround};
   }
+`;
+
+export const TransactionСell = styled.td`
+  padding: ${p => p.theme.space[4]}px;
+  color: ${p => p.theme.colors.tableText};
+  font-size: ${p => p.theme.fontSizes.s}px;
 `;

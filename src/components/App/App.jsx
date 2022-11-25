@@ -1,29 +1,32 @@
-import profile from 'data/profile.json';
-import statistics from 'data/statistics.json';
+import Profile from 'components/Profile';
+import Statistics from 'components/Statistics';
+import FriendList from 'components/FriendList';
+import TransactionHistory from 'components/Transaction';
+
+import user from 'data/user.json';
+import data from 'data/data.json';
 import friends from 'data/friends.json';
 import transactions from 'data/transactions.json';
 
-import { Profile } from 'components/Profile/Profile';
-import { Statistics } from 'components/Statistics/Statistics';
-import { FriendList } from '../Friends/FriendList';
-import { TransactionHistory } from '../Transaction/TransactionHistory';
-import { Box } from 'components/Box/Box';
+import { Container } from './App.styled';
 
-export const App = () => {
+const App = () => {
   return (
     <>
-      <Box width="1280px" bg="bodyColor" boxShadow="outline" as="main">
+      <Container>
         <Profile
-          username={profile.username}
-          tag={profile.tag}
-          location={profile.location}
-          avatar={profile.avatar}
-          stats={profile.stats}
+          username={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          stats={user.stats}
         />
-        <Statistics title="Upload stats" statistics={statistics} />
+        <Statistics title="Upload stats" stats={data} />
         <FriendList friends={friends} />
-        <TransactionHistory transactions={transactions} />
-      </Box>
+        <TransactionHistory items={transactions} />
+      </Container>
     </>
   );
 };
+
+export default App;

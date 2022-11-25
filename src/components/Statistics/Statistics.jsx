@@ -1,37 +1,42 @@
 import PropTypes from 'prop-types';
-import { StatisticsStats } from './StatisticsStats';
-import { StatsTitle, StatsList, StatsItem } from './Statistics.styled';
-import { Box } from 'components/Box/Box';
 
-export const Statistics = ({ title, statistics }) => {
+import {
+  Section,
+  StatisticsWrapper,
+  StatsTitle,
+  StatsList,
+  StatsItem,
+  StatsName,
+  StatsPerc,
+} from './Statistics.styled';
+
+const Statistics = ({ title, stats }) => {
   return (
-    <Box display="flex" justifyContent="center" mt={6} as="section">
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        bg="secondBackGround"
-        boxShadow="outline"
-        borderRadius="5px"
-      >
+    <Section>
+      <StatisticsWrapper>
         {title && <StatsTitle>{title}</StatsTitle>}
         <StatsList>
-          {statistics.map(({ id, label, percentage }) => (
+          {stats.map(({ id, label, percentage }) => (
             <StatsItem key={id}>
-              <StatisticsStats label={label} percentage={percentage} />
+              <StatsName>{label}</StatsName>
+              <StatsPerc>{percentage}%</StatsPerc>
             </StatsItem>
           ))}
         </StatsList>
-      </Box>
-    </Box>
+      </StatisticsWrapper>
+    </Section>
   );
 };
 
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
-  statistics: PropTypes.arrayOf(
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
     })
   ),
 };
+
+export default Statistics;
