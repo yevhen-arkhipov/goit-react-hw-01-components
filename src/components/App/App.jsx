@@ -8,6 +8,7 @@ import data from 'data/data.json';
 import friends from 'data/friends.json';
 import transactions from 'data/transactions.json';
 
+import { GlobalStyle } from './GlobalStyle';
 import { Container } from './App.styled';
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <FriendList friends={friends} />
         <TransactionHistory items={transactions} />
       </Container>
+      <GlobalStyle />
     </>
   );
 };

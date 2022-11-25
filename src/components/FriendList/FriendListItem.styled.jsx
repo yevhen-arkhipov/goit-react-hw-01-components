@@ -15,7 +15,7 @@ export const FriendPhoto = styled.img`
   display: flex;
   width: 48px;
   margin-right: ${p => p.theme.space[3]}px;
-  padding: ${p => p.theme.space[4]}px;
+  padding: ${p => p.theme.space[3]}px;
   background-color: ${p => p.theme.colors.backGround};
   border: 1px solid ${p => p.theme.colors.photoBorderColor};
   border-radius: 10%;
